@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Profile card */
+.profile-card {
+  background: #111111;
+  border-radius: 28px;
+  padding: 30px;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(255,255,255,0.05);
+  transition: all 0.2s;
+  border: 1px solid #2a2a2a;
+}
+
+/* Responsive: stack on mobile, avatar left on desktop */
+@media (min-width: 768px) {
+  .profile-card {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 30px;
+  }
+  .avatar-wrapper {
+    grid-column: 1;
+  }
+  .info {
+    grid-column: 2;
+  }
+}
+
+/* Avatar image */
+.avatar {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  display: block;
+  margin: 0 auto 15px auto;
+  border: 3px solid #ffffff;
+  box-shadow: 0 5px 15px rgba(255,255,255,0.1);
+}
+
+@media (min-width: 768px) {
+  .avatar {
+    margin: 0 auto;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* Name */
+h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+/* Bio */
+.bio {
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Current time */
+.current-time {
+  background: #1a1a1a;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  display: inline-block;
+  border: 1px solid #333333;
+}
+
+/* Social links */
+.social-links ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.2s;
+}
+
+.social-links a:hover {
+  color: #aaaaaa;
+  text-decoration: underline;
+}
+
+.social-links a:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Hobbies & Dislikes sections */
+.hobbies, .dislikes {
+  margin-bottom: 20px;
+}
+
+h2, .hobbies h2, .dislikes h2 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+ul[data-testid="test-user-hobbies"],
+ul[data-testid="test-user-dislikes"] {
+  list-style-position: inside;
+  padding-left: 8px;
+  color: #cccccc;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+/* Keyboard focus styles for all interactive elements */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 20px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .social-links ul {
+    gap: 12px;
+  }
+}

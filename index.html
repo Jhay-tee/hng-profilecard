@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HNG Stage 1b - Profile Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <article class="profile-card" data-testid="test-profile-card">
+      
+      <!-- Avatar -->
+      <figure class="avatar-wrapper">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" 
+             alt="Profile photo of a man with glasses smiling" 
+             class="avatar"
+             data-testid="test-user-avatar">
+        <figcaption class="visually-hidden">User avatar</figcaption>
+      </figure>
+
+      <!-- Info section -->
+      <div class="info">
+        <!-- Name -->
+        <h2 data-testid="test-user-name">Jonathan Williams</h2>
+
+        <!-- Short Bio -->
+        <p class="bio" data-testid="test-user-bio">
+          Frontend developer passionate about building accessible web applications. 
+          Loves learning new tech and solving real-world problems.
+        </p>
+
+        <!-- Current Time (milliseconds) -->
+        <p class="current-time" data-testid="test-user-time" aria-live="polite">
+          Loading time...
+        </p>
+
+        <!-- Social Links -->
+        <nav class="social-links" data-testid="test-user-social-links" aria-label="Social media links">
+          <ul>
+            <li><a href="https://x.com/joe_nah_than" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">Twitter</a></li>
+            <li><a href="https://github.com/Jhay-Tee" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/jonathan-williams" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a></li>
+          </ul>
+        </nav>
+
+        <!-- Hobbies -->
+        <section class="hobbies">
+          <h2>Hobbies</h2>
+          <ul data-testid="test-user-hobbies">
+            <li>Reading</li>
+            <li>Open source coding</li>
+            <li>Chess</li>
+          </ul>
+        </section>
+
+        <!-- Dislikes -->
+        <section class="dislikes">
+          <h2>Dislikes</h2>
+          <ul data-testid="test-user-dislikes">
+            <li>Poorly documented APIs</li>
+            <li>Slow websites</li>
+            <li>Unresponsive designs</li>
+          </ul>
+        </section>
+      </div>
+    </article>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
